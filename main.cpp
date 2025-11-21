@@ -61,14 +61,14 @@ int main() {
         cout << "No connection!" << endl;
     cout << endl;
     
-    queue<string> adjactentVertices;
+    vector<string> adjactentVertices;
     adjactentVertices = graph.GetAdjacent("Dallas");
     
     cout << "Dallas is connected to:" << endl;
-    while (!adjactentVertices.empty()) {
-        cout << "  " << adjactentVertices.front() << endl;
-        adjactentVertices.pop();
+    for (int i = 0; i < adjactentVertices.size(); i++) {
+        cout << "  " << adjactentVertices[i] << endl;
     }
     
     return 0;
 }
+
